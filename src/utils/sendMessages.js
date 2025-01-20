@@ -39,7 +39,7 @@ export const SendMessages = async (form, userData) => {
   }
 };
 
-export const SendMessageToCurrentUser = async (form) => {
+export const SendMessageToCurrentUser = async (form, id) => {
   const { name, email, message } = form;
 
   // with icons
@@ -59,7 +59,7 @@ export const SendMessageToCurrentUser = async (form) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      chat_id: ADMIN_CHAT_ID,
+      chat_id: id,
       text: StyledForm,
     }),
   });

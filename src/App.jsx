@@ -36,7 +36,7 @@ function App() {
 
     async function AfterResult() {
       e.target.reset();
-      const res = await SendMessageToCurrentUser(form);
+      const res = await SendMessageToCurrentUser(form, user.id);
     }
 
     if (result) {
